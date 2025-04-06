@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "name": "vitepress-wedding-invitation",
+  "version": "1.0.0",
+  "description": "Приглашение на свадьбу",
+  "author": "Aleksandr",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build && node move-html.js",
+    "docs:preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3"
+  }
+}
