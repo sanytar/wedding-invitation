@@ -6,11 +6,17 @@
   "author": "Aleksandr",
   "license": "MIT",
   "scripts": {
-    "dev": "vitepress dev",
+    "dev": "vitepress dev --host",
     "build": "vitepress build && node move-html.js",
     "docs:preview": "vitepress preview"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
     "vitepress": "^1.6.3"
+  },
+  "dependencies": {
+    "axios": "^1.8.4"
   }
 }
