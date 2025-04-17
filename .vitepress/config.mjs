@@ -7,4 +7,5 @@ export default defineConfig({
   description: "Приглашение на свадьбу",
   themeConfig: {},
   head: [["link", { rel: "icon", href: "/koticfavicon.ico" }]],
+  "cleanUrls": true
 })

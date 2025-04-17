@@ -1,6 +1,6 @@
 ---
 layout: false
-title: Анкета
+title: Главная
 sidebar: false
 navbar: false
 ---

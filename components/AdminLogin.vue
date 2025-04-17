@@ -1,19 +1,22 @@
 <template>
-  <div class="max-w-sm mx-auto mt-20 text-center">
-    <h2 class="text-xl font-semibold mb-4">Вход для организаторов</h2>
+  <div class="min-h-screen bg-gray-50 text-black font-body tracking-wide leading-relaxed px-4 sm:px-6 py-10 border-8 border-black border-double max-w-md mx-auto shadow-xl text-center">
+    <h2 class="text-2xl font-serif uppercase tracking-widest mb-6">Вход для организаторов</h2>
+
     <input
       v-model="input"
       type="password"
       placeholder="Введите пароль"
-      class="border rounded px-4 py-2 w-full"
+      class="w-full border border-black px-4 py-2 bg-white shadow-inner focus:outline-none focus:ring-2 focus:ring-[#bfa86d]"
     />
+
     <button
       @click="check"
-      class="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+      class="mt-6 px-6 py-3 border border-black bg-black text-white hover:bg-[#bfa86d] hover:text-black transition uppercase tracking-widest text-sm"
     >
       Войти
     </button>
-    <p v-if="error" class="text-red-500 mt-2">Неверный пароль</p>
+
+    <p v-if="error" class="text-red-600 mt-4 font-medium">Неверный пароль. Попробуйте ещё раз.</p>
   </div>
 </template>
 
@@ -25,7 +28,7 @@ const input = ref('')
 const error = ref(false)
 const router = useRouter()
 
-const correctPassword = '123' // 🔐 пароль задаёшь тут
+const correctPassword = '123' // 🔐 задается здесь
 
 function check() {
   if (input.value === correctPassword) {
@@ -36,3 +39,9 @@ function check() {
   }
 }
 </script>
+
+<style scoped>
+input:focus {
+  outline: none;
+}
+</style>
